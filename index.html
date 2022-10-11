@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h2>Que son las hojas de estilo (CSS)?</h2>
+<p>CSS son las siglas de Cascade Style Sheet que traducido significa hojas de estilo en cascada.
+
+    Las hojas de estilo es una tecnología que nos permite controlar la apariencia de una página web. En un principio, los sitios web se concentraban más en su contenido que en su presentación.
+    
+    HTML no pone atención en la apariencia del documento, sino en la estructura. CSS describe como los elementos dispuestos en la página son presentados al usuario. CSS es un gran avance que complementa el HTML y la Web en general.
+    
+    Con CSS podemos especificar estilos como el tamaño, fuentes, color, espaciado entre textos y recuadros así como el lugar donde disponer texto e imágenes en la página.
+    
+    El lenguaje de las Hojas de Estilo está definido en la Especificaciones CSS1, CSS2 y CSS3 del World Wide Web Consortium (W3C), es un estándar aceptado por toda la industria relacionada con la Web, o por lo menos, gran parte de navegadores (es verdad que el Internet Explorer de Microsoft nos dió algunos dolores de cabeza en versiones antiguos). Podemos visitar W3C
+    
+    Veremos que podemos asociar las reglas de estilo a las marcas HTML de tres maneras: directamente a la marca, en el head de la página o agrupar las reglas de estilo en un archivo independiente con extensión *.css
+    
+    En este curso veremos las tres metodologías, pero pondremos énfasis en la tercera forma, que es la más adecuada para separar el contenido de la página y la forma como se debe representar la misma por medio de la hoja de estilo.
+    
+    El curso brinda un concepto teórico corto, luego un problema resuelto que invito a ejecutar, modificar y jugar con el mismo. Por último, y lo más importante, un ejercicio propuesto que nos permitirá saber si podemos aplicar el concepto</p>
+    <br>
+
+    <h2>Definición de estilos a nivel de elemento HTML.</h2>
+    <p>Es la forma más fácil pero menos recomendada para aplicación de un estilo a un elemento HTML. Se define en la propiedad style los estilos a definir para dicho elemento.
+        Es común a veces definir estilos directamente en los elementos HTML cuando estamos probando diseños de elementos particulares de la página y posteriormente trasladar el estilo creado a la zona de definición de estilos.
+        
+        Veremos más adelante que hay muchas propiedades en CSS. En este primer ejemplo inicializamos las propiedades color (define el color del texto) y background-color (define el color de fondo del texto).
+
+    Cada vez que inicializamos una propiedad debemos separarla de la siguiente por punto y coma.</p>
+    <br>
+    <h2>Definición de estilos a nivel de página.</h2>
+    <p>También podemos hacer la definición de estilos para los distintos elementos HTML de la página en una sección especial de la cabecera que la encerramos entre las marcas HTML 
+    El problema del concepto anterior donde debíamos crear un estilo similar para el elemento h1 se puede resolver en forma más adecuada empleando la definición de estilos a nivel de página.
+
+    Problema: Mostrar dos títulos con texto de color rojo sobre fondo amarillo.
+
+    Debe estar encerrada por el elemento style. En este ejemplo indicamos al navegador que en todos los lugares de esta página donde se utilice el elemento h1 debe aplicar como estilo de color de texto el rojo y fondo el amarillo. Podemos observar que es mucho más eficiente que definir los estilos directamente sobre los elementos HTML dentro del cuerpo de la página.
+
+    Podemos definir estilos para muchos elementos en la sección style:
+    </p>
+    <br>
+    <h2>Propiedades relacionadas a fuentes.</h2>
+    <p>Contamos con una serie de propiedades relacionadas a fuentes:
+
+    font-family
+    font-size
+    font-style
+    font-weight
+    font-variant </p>
+
+    <h2>Agrupación de varios elementos HTML con una misma regla de estilo.</h2>
+    <p>Esta característica nos permite ahorrar la escritura de reglas duplicadas para diferentes elementos de HTML.
+
+    La sintaxis es disponer los nombres de los elementos HTML que queremos aplicar una regla separados por comas:
+    
+    h1,h2,h3 {
+      font-family:verdana;
+      color:#0000ff;
+    }</p>
+    <br>
+    <h2>Definición de varias reglas para un mismo elemento HTML.</h2>
+    <p>En algunas circunstancias, es necesario desglosar la inicialización de propiedades en distintas reglas.
+    
+    Podemos definir más de una regla para un elemento HTML, en este ejemplo el elemento h1 tiene dos reglas:
+    
+    h1,h2,h3,h4,h5,h6 {
+      font-family:Verdana;
+    }
+    h1 {
+      font-size:40px;
+    }</p>
+    <br>
+    
+    <h2>Propiedades relacionadas al texto (color, text-align, text-decoration)</h2>
+    <p>En algunas circunstancias, es necesario desglosar la inicialización de propiedades en distintas reglas.
+    
+    Podemos definir más de una regla para un elemento HTML, en este ejemplo el elemento h1 tiene dos reglas:
+    
+    h1,h2,h3,h4,h5,h6 {
+      font-family:Verdana;
+    }
+    h1 {
+      font-size:40px;
+    }
+    </p>
+    <br>
+    <h2>Más propiedades relacionadas al texto (letter-spacing, word-spacing, text-indent, text-transform)</h2>
+    <p>Vimos en el concepto anterior las propiedades:
+    color
+    text-align
+    text-decoration
+    Ahora veremos el objetivo de las siguientes propiedades que nos faltan:
+    
+    letter-spacing
+    word-spacing
+    text-indent
+    text-transform
+    La propiedad letter-spacing y word-spacing permiten indicar el espacio que debe haber entre los caracteres y entre las palabras.</p>
+    <br>
+    <h2>Herencia de propiedades de estilo.</h2>
+    <p>Ahora veremos que el conjunto de elementos HTML forman en sí un árbol que en su raiz podemos identificar el elemento body del cual se desprenden otros elementos contenidas en esta sección, como podrían ser los elementos h1,h2,h3,h4,h5,h6,p,div luego estas en su interior contienen otros elementos HTML como podrían ser em,strong,pre etc.
+
+    Con ejemplos veamos que hay muchos estilos que se heredan (todos los vistos hasta el momento se heredan), es decir si definimos la propiedad color para el elemento h1, luego si dicho elemento incorpora un texto con el elemento "em" en su interior, la propiedad color del elemento "em" tendrá el mismo valor que la propiedad h1 (es decir el elemento em hereda las propiedades del elemento h1)</p>
+    <br>
+    <h2>Definición de un estilo en función del contexto.</h2>
+    <p>Este otro recurso que provee las hojas de estilo en cascada (css) es la definición de un estilo para un elemento HTML siempre y cuando la misma esté contenida por otro elemento determinado. Sólo en ese caso el estilo para dicha elemento se activará.
+    
+    Supongamos que queremos que cuando disponemos un texto encerrado por el elemento strong dentro de un párrafo el color del mismo sea verde</p>
+    <br>
+    <h2>Definición de hojas de estilo en un archivo externo.</h2>
+    <p>Hasta ahora hemos visto la definición de estilos a nivel de elemento HTML y la definición de estilos a nivel de página. Dijimos que la primera forma es muy poco recomendada y la segunda es utilizada cuando queremos definir estilos que serán empleados sólo por esa página.
+    
+    Ahora veremos que la metodología más empleada es la definición de una hoja de estilo en un archivo separado que deberá tener la extensión css.
+    Este archivo contendrá las reglas de estilo (igual como las hemos visto hasta ahora) pero estarán separadas del archivo HTML.
+    
+    La ventaja fundamental es que con esto podemos aplicar las mismas reglas de estilo a parte o a todas las páginas del sitio web. Veremos que esto será muy provechoso cuando necesitemos hacer cambios de estilo (cambiando las reglas de estilo de este archivo estaremos cambiando la apariencia de múltiples páginas del sitio).
+    
+    También tiene como ventaja que al programador le resulta más ordenado tener lo referente a HTML en un archivo y las reglas de estilo en un archivo aparte.
+    
+    Otra ventaja es que cuando un navegador solicita una página, se le envía el archivo HTML y el archivo CSS, quedando guardado este último archivo en la caché de la computadora, con lo cual, en las sucesivas páginas que requieran el mismo archivo de estilos, ese mismo archivo se rescata de la caché y no requiere que el servidor web se lo reenvíe (ahorrando tiempo de transferencia)</p>
+    <br>
+    <h2>Definición de estilos por medio de clases.</h2>
+    <p>En muchas situaciones una regla de estilo puede ser igual para un conjunto de elementos HTML, en esos casos conviene plantear una regla de estilo con un nombre genérico que posteriormente se puede aplicar a varios elementos de HTML.
+        
+        Para el planteo de una regla de estilo por medio de una clase creamos un nombre de clase y le antecedemos el caracter punto:
+        
+        .resaltado{
+          color:#000000;
+          background-color:#ffff00;
+          font-style:italic;
+        }</p>
+
+        <h2>	Definición de estilos por medio de id.</h2>
+        <br>
+        <p>La diferencia fundamental en la definición de un estilo por medio de id con respecto a las clases, es que sólo podremos aplicar dicho estilo a una solo elemento HTML dentro de la página, ya que todos los id que se definen en una página HTML deben tener nombres distintos.
+            
+            La sintaxis para definir un estilo por medio de id es:
+            
+            #cabecera {
+              font-family:Times New Roman;
+              font-size:30px;
+              text-align:center;
+              color:#0000ff;
+              background-color:#bbbbbb;
+            }</p>
+            <br>
+            <h2>Propiedades relacionadas al borde de un elemento HTML (border-width, border-style, border-color)</h2>
+
+            <p>Debemos ahora hacernos la idea que todo elemento que se crea dentro de una página HTML genera una caja. Imaginemos los controles que hemos creado h1, h2, h3, p, em, etc. si fijamos la propiedad background-color veremos que el contenido se encuentra dentro de un rectángulo.
+
+                Podemos acceder a las propiedades del borde de ese rectángulo mediante las hojas de estilo CSS; las propiedades más importantes a las que tenemos acceso son:
+                
+                border-width
+                border-style
+                border-color</p>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+body {
+    background-color: rgba(0, 0, 0, 0.904);
+    color: rgb(211, 211, 211);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+
+}
+h2{
+    color:rgb(34, 156, 238);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 20px;
+}
